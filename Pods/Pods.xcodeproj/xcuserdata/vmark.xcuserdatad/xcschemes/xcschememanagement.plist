@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CocoaMQTT.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LaundryNotifier.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LaundryNotifierTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LaundryNotifierUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>12760345BF87EDF97978811EFD0216D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B6A57623F2DA419305561E082B6752B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F75FBE01E5DC25D6DC3C199EEEF75B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A192D588001C5A89C58DD09EF09450EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4688D5BC9C1EF906AA925051B0DD49A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

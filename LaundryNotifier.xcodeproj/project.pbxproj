@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A900CBB78275728A7AB7B31 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81A3894E3D3FF8B40C7AEFC /* Pods.framework */; };
 		BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0EC371C45CC7600816130 /* AppDelegate.swift */; };
 		BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC391C45CC7600816130 /* Assets.xcassets */; };
 		BCF0EC3D1C45CC7600816130 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC3B1C45CC7600816130 /* MainMenu.xib */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B81A3894E3D3FF8B40C7AEFC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF0EC341C45CC7600816130 /* LaundryNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF0EC371C45CC7600816130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF0EC391C45CC7600816130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +45,8 @@
 		BCF0EC4E1C45CC7600816130 /* LaundryNotifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaundryNotifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF0EC521C45CC7600816130 /* LaundryNotifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryNotifierUITests.swift; sourceTree = "<group>"; };
 		BCF0EC541C45CC7600816130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90AA9C7CAFFBDAA07A989F5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DA7CBAE8360389E9CCE12FFE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A900CBB78275728A7AB7B31 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9708DBA34432FB2F0CD4A128 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA7CBAE8360389E9CCE12FFE /* Pods.debug.xcconfig */,
+				D90AA9C7CAFFBDAA07A989F5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC6EB1E7CE7D4CC533CFA2AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B81A3894E3D3FF8B40C7AEFC /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCF0EC2B1C45CC7600816130 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +99,8 @@
 				BCF0EC461C45CC7600816130 /* LaundryNotifierTests */,
 				BCF0EC511C45CC7600816130 /* LaundryNotifierUITests */,
 				BCF0EC351C45CC7600816130 /* Products */,
+				9708DBA34432FB2F0CD4A128 /* Pods */,
+				BC6EB1E7CE7D4CC533CFA2AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCF0EC571C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifier" */;
 			buildPhases = (
+				311DF43565BF6B1052DD47D3 /* Check Pods Manifest.lock */,
 				BCF0EC301C45CC7600816130 /* Sources */,
 				BCF0EC311C45CC7600816130 /* Frameworks */,
 				BCF0EC321C45CC7600816130 /* Resources */,
+				7C3188EFAD71855F13A96D07 /* Embed Pods Frameworks */,
+				02B84A3844ACF7B8AD1B37FD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +213,7 @@
 				TargetAttributes = {
 					BCF0EC331C45CC7600816130 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TYR38WGV73;
 					};
 					BCF0EC421C45CC7600816130 = {
 						CreatedOnToolsVersion = 7.0;
@@ -242,6 +270,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02B84A3844ACF7B8AD1B37FD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		311DF43565BF6B1052DD47D3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C3188EFAD71855F13A96D07 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCF0EC301C45CC7600816130 /* Sources */ = {
@@ -377,25 +453,33 @@
 		};
 		BCF0EC581C45CC7600816130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA7CBAE8360389E9CCE12FFE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LaundryNotifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifier;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		BCF0EC591C45CC7600816130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90AA9C7CAFFBDAA07A989F5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = LaundryNotifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifier;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -470,6 +554,7 @@
 				BCF0EC591C45CC7600816130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCF0EC5A1C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifierTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +563,7 @@
 				BCF0EC5C1C45CC7600816130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCF0EC5D1C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifierUITests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +572,7 @@
 				BCF0EC5F1C45CC7600816130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
