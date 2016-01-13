@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0EC371C45CC7600816130 /* AppDelegate.swift */; };
+		BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC391C45CC7600816130 /* Assets.xcassets */; };
+		BCF0EC3D1C45CC7600816130 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC3B1C45CC7600816130 /* MainMenu.xib */; };
+		BCF0EC481C45CC7600816130 /* LaundryNotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0EC471C45CC7600816130 /* LaundryNotifierTests.swift */; };
+		BCF0EC531C45CC7600816130 /* LaundryNotifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0EC521C45CC7600816130 /* LaundryNotifierUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCF0EC441C45CC7600816130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF0EC2C1C45CC7600816130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF0EC331C45CC7600816130;
+			remoteInfo = LaundryNotifier;
+		};
+		BCF0EC4F1C45CC7600816130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCF0EC2C1C45CC7600816130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF0EC331C45CC7600816130;
+			remoteInfo = LaundryNotifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCF0EC341C45CC7600816130 /* LaundryNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF0EC371C45CC7600816130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCF0EC391C45CC7600816130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCF0EC3C1C45CC7600816130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BCF0EC3E1C45CC7600816130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF0EC431C45CC7600816130 /* LaundryNotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaundryNotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF0EC471C45CC7600816130 /* LaundryNotifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryNotifierTests.swift; sourceTree = "<group>"; };
+		BCF0EC491C45CC7600816130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF0EC4E1C45CC7600816130 /* LaundryNotifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaundryNotifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF0EC521C45CC7600816130 /* LaundryNotifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryNotifierUITests.swift; sourceTree = "<group>"; };
+		BCF0EC541C45CC7600816130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCF0EC311C45CC7600816130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF0EC401C45CC7600816130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF0EC4B1C45CC7600816130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCF0EC2B1C45CC7600816130 = {
+			isa = PBXGroup;
+			children = (
+				BCF0EC361C45CC7600816130 /* LaundryNotifier */,
+				BCF0EC461C45CC7600816130 /* LaundryNotifierTests */,
+				BCF0EC511C45CC7600816130 /* LaundryNotifierUITests */,
+				BCF0EC351C45CC7600816130 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCF0EC351C45CC7600816130 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCF0EC341C45CC7600816130 /* LaundryNotifier.app */,
+				BCF0EC431C45CC7600816130 /* LaundryNotifierTests.xctest */,
+				BCF0EC4E1C45CC7600816130 /* LaundryNotifierUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCF0EC361C45CC7600816130 /* LaundryNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				BCF0EC371C45CC7600816130 /* AppDelegate.swift */,
+				BCF0EC391C45CC7600816130 /* Assets.xcassets */,
+				BCF0EC3B1C45CC7600816130 /* MainMenu.xib */,
+				BCF0EC3E1C45CC7600816130 /* Info.plist */,
+			);
+			path = LaundryNotifier;
+			sourceTree = "<group>";
+		};
+		BCF0EC461C45CC7600816130 /* LaundryNotifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCF0EC471C45CC7600816130 /* LaundryNotifierTests.swift */,
+				BCF0EC491C45CC7600816130 /* Info.plist */,
+			);
+			path = LaundryNotifierTests;
+			sourceTree = "<group>";
+		};
+		BCF0EC511C45CC7600816130 /* LaundryNotifierUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BCF0EC521C45CC7600816130 /* LaundryNotifierUITests.swift */,
+				BCF0EC541C45CC7600816130 /* Info.plist */,
+			);
+			path = LaundryNotifierUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCF0EC331C45CC7600816130 /* LaundryNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCF0EC571C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifier" */;
+			buildPhases = (
+				BCF0EC301C45CC7600816130 /* Sources */,
+				BCF0EC311C45CC7600816130 /* Frameworks */,
+				BCF0EC321C45CC7600816130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LaundryNotifier;
+			productName = LaundryNotifier;
+			productReference = BCF0EC341C45CC7600816130 /* LaundryNotifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCF0EC421C45CC7600816130 /* LaundryNotifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCF0EC5A1C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifierTests" */;
+			buildPhases = (
+				BCF0EC3F1C45CC7600816130 /* Sources */,
+				BCF0EC401C45CC7600816130 /* Frameworks */,
+				BCF0EC411C45CC7600816130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCF0EC451C45CC7600816130 /* PBXTargetDependency */,
+			);
+			name = LaundryNotifierTests;
+			productName = LaundryNotifierTests;
+			productReference = BCF0EC431C45CC7600816130 /* LaundryNotifierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCF0EC4D1C45CC7600816130 /* LaundryNotifierUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCF0EC5D1C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifierUITests" */;
+			buildPhases = (
+				BCF0EC4A1C45CC7600816130 /* Sources */,
+				BCF0EC4B1C45CC7600816130 /* Frameworks */,
+				BCF0EC4C1C45CC7600816130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCF0EC501C45CC7600816130 /* PBXTargetDependency */,
+			);
+			name = LaundryNotifierUITests;
+			productName = LaundryNotifierUITests;
+			productReference = BCF0EC4E1C45CC7600816130 /* LaundryNotifierUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCF0EC2C1C45CC7600816130 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Mark Veinot";
+				TargetAttributes = {
+					BCF0EC331C45CC7600816130 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					BCF0EC421C45CC7600816130 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = BCF0EC331C45CC7600816130;
+					};
+					BCF0EC4D1C45CC7600816130 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = BCF0EC331C45CC7600816130;
+					};
+				};
+			};
+			buildConfigurationList = BCF0EC2F1C45CC7600816130 /* Build configuration list for PBXProject "LaundryNotifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCF0EC2B1C45CC7600816130;
+			productRefGroup = BCF0EC351C45CC7600816130 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCF0EC331C45CC7600816130 /* LaundryNotifier */,
+				BCF0EC421C45CC7600816130 /* LaundryNotifierTests */,
+				BCF0EC4D1C45CC7600816130 /* LaundryNotifierUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCF0EC321C45CC7600816130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */,
+				BCF0EC3D1C45CC7600816130 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF0EC411C45CC7600816130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF0EC4C1C45CC7600816130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCF0EC301C45CC7600816130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF0EC3F1C45CC7600816130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF0EC481C45CC7600816130 /* LaundryNotifierTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF0EC4A1C45CC7600816130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF0EC531C45CC7600816130 /* LaundryNotifierUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCF0EC451C45CC7600816130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCF0EC331C45CC7600816130 /* LaundryNotifier */;
+			targetProxy = BCF0EC441C45CC7600816130 /* PBXContainerItemProxy */;
+		};
+		BCF0EC501C45CC7600816130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCF0EC331C45CC7600816130 /* LaundryNotifier */;
+			targetProxy = BCF0EC4F1C45CC7600816130 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BCF0EC3B1C45CC7600816130 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCF0EC3C1C45CC7600816130 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCF0EC551C45CC7600816130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCF0EC561C45CC7600816130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BCF0EC581C45CC7600816130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LaundryNotifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCF0EC591C45CC7600816130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LaundryNotifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCF0EC5B1C45CC7600816130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LaundryNotifierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaundryNotifier.app/Contents/MacOS/LaundryNotifier";
+			};
+			name = Debug;
+		};
+		BCF0EC5C1C45CC7600816130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LaundryNotifierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaundryNotifier.app/Contents/MacOS/LaundryNotifier";
+			};
+			name = Release;
+		};
+		BCF0EC5E1C45CC7600816130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LaundryNotifierUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LaundryNotifier;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BCF0EC5F1C45CC7600816130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LaundryNotifierUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.mvgrafx.LaundryNotifierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LaundryNotifier;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCF0EC2F1C45CC7600816130 /* Build configuration list for PBXProject "LaundryNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF0EC551C45CC7600816130 /* Debug */,
+				BCF0EC561C45CC7600816130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCF0EC571C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF0EC581C45CC7600816130 /* Debug */,
+				BCF0EC591C45CC7600816130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCF0EC5A1C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF0EC5B1C45CC7600816130 /* Debug */,
+				BCF0EC5C1C45CC7600816130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCF0EC5D1C45CC7600816130 /* Build configuration list for PBXNativeTarget "LaundryNotifierUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF0EC5E1C45CC7600816130 /* Debug */,
+				BCF0EC5F1C45CC7600816130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCF0EC2C1C45CC7600816130 /* Project object */;
+}
