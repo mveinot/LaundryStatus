@@ -11,7 +11,16 @@ import CocoaMQTT
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
-    var mqtt: CocoaMQTT?
+    var mqtt: CocoaMQTT {
+        let clientIdPid = "CocoaMQTT"
+        let mqttClient = CocoaMQTT(clientId: clientIdPid, host: "192.168.5.10", port: 1883)
+
+        mqttClient.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
+        mqttClient.keepAlive = 90
+        mqttClient.delegate = self
+        
+        return mqttClient
+    }
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var actionMenu: NSMenu!
@@ -26,8 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
         
         statusItem.image = icon
         statusItem.menu = actionMenu
-        mqttSetting()
-        mqtt!.connect()
+//        mqttSetting()
+        mqtt.connect()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -35,24 +44,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     }
 
     @IBAction func webUI(sender: NSMenuItem) {
-        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "http://smartlaundry.local")!)
+        if let url = NSURL(string: "http://smartlaundry.local") {
+            NSWorkspace.sharedWorkspace().openURL(url)
+        }
     }
     
     @IBAction func quit(sender: NSMenuItem) {
         NSApplication.sharedApplication().terminate(self)
     }
 
-    func mqttSetting()
-    {
-        let clientIdPid = "CocoaMQTT"
-        mqtt = CocoaMQTT(clientId: clientIdPid, host: "192.168.5.10", port: 1883)
-        if let mqtt = mqtt {
-            mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
-            mqtt.keepAlive = 90
-            mqtt.delegate = self
-        }
-    }
-    
     func mqtt(mqtt: CocoaMQTT, didConnect host: String, port: Int) {
         print("didConnect \(host):\(port)")
     }
