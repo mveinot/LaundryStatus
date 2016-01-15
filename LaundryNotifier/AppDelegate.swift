@@ -9,17 +9,6 @@
 import Cocoa
 import CocoaMQTT
 
-class LaundryEvent {
-    var eventMessage: String?
-    var eventTopic: String?
-    var eventTime: NSDate?
-    
-    func log()
-    {
-        print("Event: \(eventTime!.description) - \(eventTopic!) - \(eventMessage!)")
-    }
-}
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     var mqtt: CocoaMQTT {
@@ -68,8 +57,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
 
     @IBAction func viewLog(sender: NSMenuItem) {
         print("show window")
-        eventLog = EventLog()
+        eventLog = EventLog(windowNibName: "EventLog")
         eventLog.showWindow(nil)
+        eventLog.setEventList(events)
     }
     
     func mqtt(mqtt: CocoaMQTT, didConnect host: String, port: Int) {
@@ -103,10 +93,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
             event.eventTopic = topic
             event.eventTime = NSDate()
             
-            //event.log()
-            
             events.append(event)
-            //print("Events: \(events.count)")
+            eventLog.setEventList(events)
             
             let notification:NSUserNotification = NSUserNotification()
             notification.title = "Laundry Notification"
