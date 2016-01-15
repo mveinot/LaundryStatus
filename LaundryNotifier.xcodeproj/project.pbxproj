@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A900CBB78275728A7AB7B31 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81A3894E3D3FF8B40C7AEFC /* Pods.framework */; };
+		BC6DE7981C494BC600742B85 /* EventLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE7961C494BC600742B85 /* EventLog.swift */; settings = {ASSET_TAGS = (); }; };
+		BC6DE7991C494BC600742B85 /* EventLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6DE7971C494BC600742B85 /* EventLog.xib */; settings = {ASSET_TAGS = (); }; };
 		BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0EC371C45CC7600816130 /* AppDelegate.swift */; };
 		BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC391C45CC7600816130 /* Assets.xcassets */; };
 		BCF0EC3D1C45CC7600816130 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC3B1C45CC7600816130 /* MainMenu.xib */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		B81A3894E3D3FF8B40C7AEFC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6DE7961C494BC600742B85 /* EventLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLog.swift; sourceTree = "<group>"; };
+		BC6DE7971C494BC600742B85 /* EventLog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventLog.xib; sourceTree = "<group>"; };
 		BCF0EC341C45CC7600816130 /* LaundryNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF0EC371C45CC7600816130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF0EC391C45CC7600816130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				BCF0EC391C45CC7600816130 /* Assets.xcassets */,
 				BCF0EC3B1C45CC7600816130 /* MainMenu.xib */,
 				BCF0EC3E1C45CC7600816130 /* Info.plist */,
+				BC6DE7961C494BC600742B85 /* EventLog.swift */,
+				BC6DE7971C494BC600742B85 /* EventLog.xib */,
 			);
 			path = LaundryNotifier;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			files = (
 				BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */,
 				BCF0EC3D1C45CC7600816130 /* MainMenu.xib in Resources */,
+				BC6DE7991C494BC600742B85 /* EventLog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */,
+				BC6DE7981C494BC600742B85 /* EventLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

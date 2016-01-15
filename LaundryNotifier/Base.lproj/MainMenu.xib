@@ -674,6 +674,12 @@
                         <action selector="webUI:" target="Voe-Tx-rLC" id="Aoq-f5-VFM"/>
                     </connections>
                 </menuItem>
+                <menuItem title="View Event Log" id="y7b-Ds-leB">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="viewLog:" target="Voe-Tx-rLC" id="F6S-It-1Ay"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="od8-6b-H72">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

@@ -34,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     }
     
     var events = [LaundryEvent]()
+    var eventLog: EventLog!
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var actionMenu: NSMenu!
@@ -65,6 +66,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
         NSApplication.sharedApplication().terminate(self)
     }
 
+    @IBAction func viewLog(sender: NSMenuItem) {
+        print("show window")
+        eventLog = EventLog()
+        eventLog.showWindow(nil)
+    }
+    
     func mqtt(mqtt: CocoaMQTT, didConnect host: String, port: Int) {
         print("didConnect \(host):\(port)")
     }
