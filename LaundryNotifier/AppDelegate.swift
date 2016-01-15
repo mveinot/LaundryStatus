@@ -9,6 +9,17 @@
 import Cocoa
 import CocoaMQTT
 
+class LaundryEvent {
+    var eventMessage: String?
+    var eventTopic: String?
+    var eventTime: NSDate?
+    
+    func log()
+    {
+        print("Event: \(eventTime!.description) - \(eventTopic!) - \(eventMessage!)")
+    }
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     var mqtt: CocoaMQTT {
@@ -21,6 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
         
         return mqttClient
     }
+    
+    var events = [LaundryEvent]()
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var actionMenu: NSMenu!
@@ -35,7 +48,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
         
         statusItem.image = icon
         statusItem.menu = actionMenu
-//        mqttSetting()
         mqtt.connect()
     }
 
@@ -74,11 +86,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     }
     
     func mqtt(mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
+        let event: LaundryEvent = LaundryEvent()
+        let topic = message.topic.stringByReplacingOccurrencesOfString("laundry/", withString: "")
+        
         print("didReceivedMessage: \(message.string) with id \(id)")
         if let mqttMessage = message.string
         {
+            event.eventMessage = message.string
+            event.eventTopic = topic
+            event.eventTime = NSDate()
+            
+            //event.log()
+            
+            events.append(event)
+            //print("Events: \(events.count)")
+            
             let notification:NSUserNotification = NSUserNotification()
             notification.title = "Laundry Notification"
+            notification.subtitle = topic
             notification.informativeText = mqttMessage
             
             notification.soundName = NSUserNotificationDefaultSoundName
