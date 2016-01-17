@@ -32,7 +32,10 @@ class EventLog: NSWindowController, NSTableViewDelegate, NSTableViewDataSource {
     {
         events = eventList
         print("loaded events: \(events.count)")
-        eventTable.reloadData()
+        if (eventTable != nil)
+        {
+            eventTable.reloadData()
+        }
     }
     
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
