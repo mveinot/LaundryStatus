@@ -30,7 +30,7 @@ class EventLog: NSWindowController, NSTableViewDelegate, NSTableViewDataSource {
     
     func setEventList(eventList: [LaundryEvent])
     {
-        events = eventList
+        events = eventList.reverse()
         print("loaded events: \(events.count)")
         if (eventTable != nil)
         {
