@@ -11,33 +11,49 @@ import CocoaMQTT
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
-    var mqtt: CocoaMQTT {
-        let clientIdPid = "CocoaMQTT"
-        let mqttClient = CocoaMQTT(clientId: clientIdPid, host: "192.168.5.10", port: 1883)
-
-        mqttClient.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
-        mqttClient.keepAlive = 90
-        mqttClient.delegate = self
+    var mqtt: CocoaMQTT
         
-        return mqttClient
+    override init()
+    {
+        let settings = NSUserDefaults.standardUserDefaults()
+        let mqtthost = settings.objectForKey("MQTTServer") as? String ?? "192.168.5.10"
+        let mqttport = settings.objectForKey("MQTTPort") as? UInt16 ?? 1883
+        let mqttusername = settings.objectForKey("MQTTUsername") as? String ?? "username"
+        let mqttpassword = settings.objectForKey("MQTTPassword") as? String ?? "password"
+        
+        print(mqttusername)
+        print(mqttpassword)
+        
+        let clientIdPid = "CocoaMQTT"
+        self.mqtt = CocoaMQTT(clientId: clientIdPid)
+        
+        self.mqtt.host = mqtthost
+        self.mqtt.port = mqttport
+        self.mqtt.username = mqttusername
+        self.mqtt.password = mqttpassword
+
+        self.mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
     }
     
     var events = [LaundryEvent]()
     var eventLog: EventLog = EventLog(windowNibName: "EventLog")
+    var settingDlg: settingsDialog = settingsDialog(windowNibName: "settingsDialog")
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var actionMenu: NSMenu!
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-    
+
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         NSApp.setActivationPolicy(NSApplicationActivationPolicy.Accessory)
-        
+
         let icon = NSImage(named: "statusIcon")
         icon?.template = true
         
         statusItem.image = icon
         statusItem.menu = actionMenu
+
+        mqtt.delegate = self
         mqtt.connect()
     }
 
@@ -51,10 +67,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
         }
     }
     
+    @IBAction func openPrefs(sender: NSMenuItem) {
+        settingDlg.showWindow(nil)
+    }
+    
     @IBAction func quit(sender: NSMenuItem) {
         NSApplication.sharedApplication().terminate(self)
     }
-
+    
+    @IBAction func reconnect(sender: NSMenuItem) {
+        mqtt.connect()
+    }
+    
     @IBAction func viewLog(sender: NSMenuItem) {
         eventLog.showWindow(nil)
         eventLog.setEventList(events)
@@ -62,6 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     
     func mqtt(mqtt: CocoaMQTT, didConnect host: String, port: Int) {
         print("didConnect \(host):\(port)")
+        mqtt.publish("laundry/Client", withString: "Monitor connected")
     }
     
     func mqtt(mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {

@@ -680,6 +680,18 @@
                         <action selector="viewLog:" target="Voe-Tx-rLC" id="F6S-It-1Ay"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Preferences..." id="Pe7-Ez-PzZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openPrefs:" target="Voe-Tx-rLC" id="8sM-zW-UZP"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Reconnect" id="DSp-sz-F3h">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="reconnect:" target="Voe-Tx-rLC" id="IgH-O0-v46"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="od8-6b-H72">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

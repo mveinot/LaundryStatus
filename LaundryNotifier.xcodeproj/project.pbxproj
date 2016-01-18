@@ -10,6 +10,8 @@
 		2A900CBB78275728A7AB7B31 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81A3894E3D3FF8B40C7AEFC /* Pods.framework */; };
 		BC6DE7981C494BC600742B85 /* EventLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE7961C494BC600742B85 /* EventLog.swift */; settings = {ASSET_TAGS = (); }; };
 		BC6DE7991C494BC600742B85 /* EventLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6DE7971C494BC600742B85 /* EventLog.xib */; settings = {ASSET_TAGS = (); }; };
+		BCCFA4301C4D5DFB0013C01F /* settingsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFA42E1C4D5DFB0013C01F /* settingsDialog.swift */; settings = {ASSET_TAGS = (); }; };
+		BCCFA4311C4D5DFB0013C01F /* settingsDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFA42F1C4D5DFB0013C01F /* settingsDialog.xib */; settings = {ASSET_TAGS = (); }; };
 		BCE70AE21C4956EF0069D11E /* LaundryEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE70AE11C4956EF0069D11E /* LaundryEvent.swift */; settings = {ASSET_TAGS = (); }; };
 		BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF0EC371C45CC7600816130 /* AppDelegate.swift */; };
 		BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EC391C45CC7600816130 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		B81A3894E3D3FF8B40C7AEFC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6DE7961C494BC600742B85 /* EventLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLog.swift; sourceTree = "<group>"; };
 		BC6DE7971C494BC600742B85 /* EventLog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventLog.xib; sourceTree = "<group>"; };
+		BCCFA42E1C4D5DFB0013C01F /* settingsDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsDialog.swift; sourceTree = "<group>"; };
+		BCCFA42F1C4D5DFB0013C01F /* settingsDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsDialog.xib; sourceTree = "<group>"; };
 		BCE70AE11C4956EF0069D11E /* LaundryEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaundryEvent.swift; sourceTree = "<group>"; };
 		BCF0EC341C45CC7600816130 /* LaundryNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF0EC371C45CC7600816130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				BC6DE7961C494BC600742B85 /* EventLog.swift */,
 				BC6DE7971C494BC600742B85 /* EventLog.xib */,
 				BCE70AE11C4956EF0069D11E /* LaundryEvent.swift */,
+				BCCFA42E1C4D5DFB0013C01F /* settingsDialog.swift */,
+				BCCFA42F1C4D5DFB0013C01F /* settingsDialog.xib */,
 			);
 			path = LaundryNotifier;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCFA4311C4D5DFB0013C01F /* settingsDialog.xib in Resources */,
 				BCF0EC3A1C45CC7600816130 /* Assets.xcassets in Resources */,
 				BCF0EC3D1C45CC7600816130 /* MainMenu.xib in Resources */,
 				BC6DE7991C494BC600742B85 /* EventLog.xib in Resources */,
@@ -334,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCFA4301C4D5DFB0013C01F /* settingsDialog.swift in Sources */,
 				BCF0EC381C45CC7600816130 /* AppDelegate.swift in Sources */,
 				BC6DE7981C494BC600742B85 /* EventLog.swift in Sources */,
 				BCE70AE21C4956EF0069D11E /* LaundryEvent.swift in Sources */,
