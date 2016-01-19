@@ -12,19 +12,23 @@ import CocoaMQTT
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     var mqtt: CocoaMQTT
-        
+    
     override init()
     {
+        let host: NSHost
+        host = NSHost.currentHost()
+        
         let settings = NSUserDefaults.standardUserDefaults()
         let mqtthost = settings.objectForKey("MQTTServer") as? String ?? "192.168.5.10"
         let mqttport = settings.objectForKey("MQTTPort") as? UInt16 ?? 1883
         let mqttusername = settings.objectForKey("MQTTUsername") as? String ?? "username"
         let mqttpassword = settings.objectForKey("MQTTPassword") as? String ?? "password"
         
-        print(mqttusername)
-        print(mqttpassword)
-        
-        let clientIdPid = "CocoaMQTT"
+        var clientIdPid = "LaundryMonitor";
+        if let hostname = host.name {
+            clientIdPid = clientIdPid+"-"+hostname
+        }
+        print(clientIdPid)
         self.mqtt = CocoaMQTT(clientId: clientIdPid)
         
         self.mqtt.host = mqtthost
@@ -41,6 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var actionMenu: NSMenu!
+    @IBOutlet weak var menuStatusItem: NSMenuItem!
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
@@ -86,6 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     
     func mqtt(mqtt: CocoaMQTT, didConnect host: String, port: Int) {
         print("didConnect \(host):\(port)")
+        menuStatusItem.title = "Status: connected"
         mqtt.publish("laundry/Client", withString: "Monitor connected")
     }
     
@@ -140,15 +146,23 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     }
     
     func mqttDidPing(mqtt: CocoaMQTT) {
-        print("didPing")
+        menuStatusItem.title = "Status: ping!"
     }
     
     func mqttDidReceivePong(mqtt: CocoaMQTT) {
-        _console("didReceivePong")
+        menuStatusItem.title = "Status: connected"
     }
     
     func mqttDidDisconnect(mqtt: CocoaMQTT, withError err: NSError?) {
         _console("mqttDidDisconnect: \(err!.description) ")
+        
+        let alert = NSAlert()
+        alert.messageText = "Laundry Monitor"
+        alert.addButtonWithTitle("OK")
+        alert.informativeText = "Connection to the message server was lost. Check connection and click reconnect from the menu"
+        alert.runModal()
+
+        menuStatusItem.title = "Status: disconnected"
     }
     
     func _console(info: String) {

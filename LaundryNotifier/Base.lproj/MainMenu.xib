@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="LaundryNotifier" customModuleProvider="target">
             <connections>
                 <outlet property="actionMenu" destination="Vhc-Gr-QAA" id="9CT-No-ZJ3"/>
+                <outlet property="menuStatusItem" destination="xU7-nl-3i1" id="dZ1-lW-BPu"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -668,6 +669,9 @@
         </menu>
         <menu id="Vhc-Gr-QAA">
             <items>
+                <menuItem title="Status: disconnected" enabled="NO" id="xU7-nl-3i1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="View Web Interface" id="cbS-m7-GAi">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
