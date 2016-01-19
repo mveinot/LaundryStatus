@@ -28,7 +28,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
         if let hostname = host.name {
             clientIdPid = clientIdPid+"-"+hostname
         }
-        print(clientIdPid)
         self.mqtt = CocoaMQTT(clientId: clientIdPid)
         
         self.mqtt.host = mqtthost
@@ -87,6 +86,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, CocoaMQTTDelegate {
     @IBAction func viewLog(sender: NSMenuItem) {
         eventLog.showWindow(nil)
         eventLog.setEventList(events)
+    }
+    
+    @IBAction func showAbout(sender: NSMenuItem) {
+        let alert = NSAlert()
+        let versionNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
+        let buildNumber = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion") as! String
+        
+        let versionBuildString = "Version: \(versionNumber) (\(buildNumber))"
+        
+        alert.messageText = "Laundry Monitor"
+        alert.addButtonWithTitle("OK")
+        alert.informativeText = versionBuildString
+        alert.runModal()
     }
     
     func mqtt(mqtt: CocoaMQTT, didConnect host: String, port: Int) {

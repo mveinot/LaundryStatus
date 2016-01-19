@@ -696,6 +696,12 @@
                         <action selector="reconnect:" target="Voe-Tx-rLC" id="IgH-O0-v46"/>
                     </connections>
                 </menuItem>
+                <menuItem title="About..." id="cxg-gm-Ans">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAbout:" target="Voe-Tx-rLC" id="Wle-za-V6r"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="od8-6b-H72">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
